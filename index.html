@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AlMTIKF</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="hero">
+
+        <nav>
+            <img src="/images/logo.png" alt="logo image" class="logo">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Comtact</a></li>
+            </ul>
+            <img src="/images/user.png" alt="user image" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/images/user.png">
+                        <h2>James Aldrino</h2>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/images/profile.png">
+                        <p>Edit Profile</p>
+                        <span> &gt </span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/images/setting.png">
+                        <p>Settings & Privacy</p>
+                        <span>&gt</span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/images/help.png">
+                        <p>Help & Support</p>
+                        <span>&gt</span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="/images/logout.png">
+                        <p>Logout </p>
+                        <span>&gt</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <input type="checkbox" id="check">
+    <!--nav area start-->
+    <nav>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+          </label>
+    </nav>
+    <!--nav area end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+        <center>
+            <img src="/images/user.png" class="profile_image" alt="">
+            <h4>Jessica</h4>
+        </center>
+        <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+        <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+        <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+        <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+        <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content">
+        <section>
+            <video id="slider" autoplay muted loop>
+                <source src="/video (1080p).mp4" type="video/mp4">
+            </video>
+            <ul class="navigation">
+                <li onclick="videourl('pexels_videos_1779202 (720p).mp4')"><img src="/images/user.png"></li>
+                <li onclick="videourl('pexels_videos_2519660 (2160p).mp4')"><img src="/images/user.png"></li>
+                <li onclick="videourl('video (1080p).mp4')"><img src="/images/user.png"></li>
+                <li onclick="videourl('video (2160p).mp4')"><img src="/images/user.png"></li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+
+        function videourl(hmm) {
+            document.getElementById("slider").src = hmm;
+        }
+    </script>
+</body>
+
+</html>
